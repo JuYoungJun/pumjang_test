@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼원수산 직영 양식장 | 품장의 근본과 신뢰</title>
+
+    <meta name="description" content="전남 나주 삼원수산 직영 양식장. 물·품종·안전·사람의 정성으로 완성되는 품장의 기준을 확인하세요." />
+    <link rel="canonical" href="https://pumjang.com/farm.html" />
+
+    <link rel="icon" href="assets/img/shared/favicon-32x32.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- 기존 CSS 유지 -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/landing.css">
+
+    <!-- ✅ Farm 페이지 전용 스타일(다른 페이지 영향 최소) -->
+    <style>
+        :root {
+            --sub: #757f90;
+            --deepBlue: #0b2746;
+            /* 신뢰감(Deep Blue) */
+            --nav: #3D4E67;
+            /* 브랜드 메인 */
+            --line: rgba(0, 0, 0, .08);
+            --soft: #f6f8fb;
+            --shadowSoft: 0 14px 34px rgba(0, 0, 0, .10);
+            --shadow: 0 18px 48px rgba(0, 0, 0, .18);
+            --r: 18px;
+            --r2: 24px;
+            --max: 1200px;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        .wrap {
+            width: min(var(--max), calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* ===== Hero (영상/이미지) ===== */
+        .farmHero {
+            position: relative;
+            min-height: 86vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 96px 0 56px;
+            color: #fff;
+            overflow: hidden;
+            background: #0a0d12;
+        }
+
+        .farmHero video,
+        .farmHero .heroPoster {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.03);
+            filter: saturate(1.05) contrast(1.05);
+        }
+
+        .farmHero .heroPoster {
+            background: #111 center/cover no-repeat;
+        }
+
+        .farmHero .ov {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(900px 520px at 18% 12%, rgba(61, 78, 103, .38), transparent 60%),
+                radial-gradient(900px 520px at 80% 20%, rgba(11, 39, 70, .55), transparent 55%),
+                linear-gradient(180deg, rgba(0, 0, 0, .12), rgba(0, 0, 0, .78));
+        }
+
+        .heroIn {
+            position: relative;
+            max-width: 920px;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            letter-spacing: .18em;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .82);
+        }
+
+        .kicker .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .72);
+        }
+
+        .heroTitle {
+            margin: 16px 0 0;
+            font-size: 48px;
+            line-height: 1.05;
+            letter-spacing: -.9px;
+            font-weight: 1000;
+        }
+
+        .heroTitle .thin {
+            font-weight: 500;
+            opacity: .95;
+        }
+
+        .heroDesc {
+            margin: 16px 0 0;
+            max-width: 820px;
+            color: rgba(255, 255, 255, .78);
+            line-height: 1.75;
+            font-size: 15px;
+        }
+
+        .ctaRow {
+            margin-top: 22px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px;
+            border-radius: 999px;
+            font-weight: 900;
+            letter-spacing: -.2px;
+            transition: .2s ease;
+            will-change: transform;
+            white-space: nowrap;
+        }
+
+        .cta:hover {
+            transform: translateY(-1px);
+        }
+
+        .cta.primary {
+            background: var(--nav);
+            color: #fff;
+            box-shadow: var(--shadow);
+        }
+
+        .cta.ghost {
+            background: rgba(255, 255, 255, .10);
+            border: 1px solid rgba(255, 255, 255, .22);
+            color: #fff;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta.white {
+            background: #fff;
+            color: #111;
+        }
+
+        .heroMetrics {
+            margin-top: 22px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .14);
+            backdrop-filter: blur(10px);
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+        }
+
+        .metric b {
+            font-weight: 1000;
+            color: #fff;
+        }
+
+        .metric span {
+            color: rgba(255, 255, 255, .72);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* ===== Section base ===== */
+        .sec {
+            padding: 76px 0;
+            background: #fff;
+        }
+
+        .sec.soft {
+            background: var(--soft);
+        }
+
+        .head .k {
+            font-weight: 800;
+            letter-spacing: .22em;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: rgba(17, 17, 17, .55);
+        }
+
+        .head .t {
+            margin: 10px 0 0;
+            font-size: 30px;
+            line-height: 1.15;
+            letter-spacing: -0.6px;
+            color: var(--nav);
+            font-weight: 900;
+        }
+
+        .head .d {
+            margin: 12px 0 0;
+            max-width: 860px;
+            color: #5d5d5d;
+            line-height: 1.75;
+            font-size: 15px;
+        }
+
+        /* ===== “환경(물)” : Blue tone feature ===== */
+        .waterCard {
+            margin-top: 20px;
+            border-radius: var(--r2);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadowSoft);
+            background: linear-gradient(135deg, rgba(11, 39, 70, .92), rgba(15, 17, 20, .92));
+            color: #fff;
+            position: relative;
+        }
+
+        .waterCard .bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .72)),
+                url("assets/img/farm/water.webp") center/cover no-repeat;
+            opacity: .70;
+            transform: scale(1.03);
+        }
+
+        .waterCard .in {
+            position: relative;
+            padding: 24px 22px;
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 18px;
+            align-items: end;
+        }
+
+        .waterCard h3 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 1000;
+            letter-spacing: -.3px;
+        }
+
+        .waterCard p {
+            margin: 10px 0 0;
+            color: rgba(255, 255, 255, .78);
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        .stats {
+            display: grid;
+            gap: 10px;
+            justify-items: stretch;
+        }
+
+        .stat {
+            border-radius: 16px;
+            padding: 12px 14px;
+            background: rgba(255, 255, 255, .10);
+            border: 1px solid rgba(255, 255, 255, .16);
+        }
+
+        .stat .st {
+            font-weight: 1000;
+            font-size: 13px;
+            letter-spacing: -.1px;
+        }
+
+        .stat .sd {
+            margin-top: 6px;
+            color: rgba(255, 255, 255, .75);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* ===== “품종(자포니카)” ===== */
+        .split {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            align-items: stretch;
+        }
+
+        .card {
+            border-radius: var(--r2);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadowSoft);
+            background: #fff;
+        }
+
+        .card .img {
+            height: 280px;
+            background: #ddd center/cover no-repeat;
+        }
+
+        .card .body {
+            padding: 18px 18px 20px;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: .08em;
+            color: var(--nav);
+            background: rgba(61, 78, 103, .08);
+            border: 1px solid rgba(61, 78, 103, .14);
+            text-transform: uppercase;
+        }
+
+        .card h3 {
+            margin: 12px 0 0;
+            font-size: 18px;
+            font-weight: 1000;
+            letter-spacing: -.2px;
+        }
+
+        .card p {
+            margin: 10px 0 0;
+            color: #5d5d5d;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .bullets {
+            margin: 12px 0 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .bullets b {
+            color: var(--nav);
+        }
+
+        /* ===== “안전(인증/성적서)” ===== */
+        .certGrid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 14px;
+            align-items: stretch;
+        }
+
+        .certMain {
+            border-radius: var(--r2);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadowSoft);
+            background: #fff;
+            padding: 18px;
+        }
+
+        .certBadges {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: #fff;
+        }
+
+        .badge .ic {
+            width: 38px;
+            height: 38px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(11, 39, 70, .10);
+            border: 1px solid rgba(11, 39, 70, .18);
+            color: var(--deepBlue);
+            font-weight: 1000;
+        }
+
+        .badge .bt {
+            font-weight: 1000;
+            font-size: 14px;
+            letter-spacing: -.1px;
+        }
+
+        .badge .bs {
+            margin-top: 4px;
+            font-size: 12px;
+            color: rgba(17, 17, 17, .60);
+            line-height: 1.45;
+        }
+
+        .certSlide {
+            border-radius: var(--r2);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadowSoft);
+            background: #0f1114;
+            position: relative;
+            min-height: 380px;
+        }
+
+        .certSlide .sTrack {
+            display: flex;
+            height: 100%;
+            transition: transform .35s ease;
+            will-change: transform;
+        }
+
+        .certSlide .s {
+            min-width: 100%;
+            background: #111 center/cover no-repeat;
+            filter: contrast(1.03);
+        }
+
+        .certSlide .ctrls {
+            position: absolute;
+            inset: 12px 12px auto auto;
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .ctrl {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, .18);
+            background: rgba(255, 255, 255, .12);
+            color: #fff;
+            cursor: pointer;
+            font-weight: 1000;
+            transition: .2s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .ctrl:hover {
+            transform: translateY(-1px);
+            background: rgba(255, 255, 255, .16);
+        }
+
+        /* ===== “사람(관리자 철학)” ===== */
+        .person {
+            margin-top: 20px;
+            border-radius: var(--r2);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadowSoft);
+            background: #fff;
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 0;
+            align-items: stretch;
+        }
+
+        .person .pImg {
+            min-height: 360px;
+            background: #ddd center/cover no-repeat;
+        }
+
+        .person .pBody {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        blockquote {
+            margin: 16px 0 0;
+            padding: 14px 14px;
+            border-radius: 16px;
+            background: rgba(61, 78, 103, .06);
+            border: 1px solid rgba(61, 78, 103, .12);
+            color: #111;
+            font-weight: 1000;
+            line-height: 1.55;
+            letter-spacing: -.2px;
+        }
+
+        .qna {
+            margin-top: 12px;
+            color: #5d5d5d;
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        /* ===== Farm to Table (4 steps) ===== */
+        .journey {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .j {
+            border-radius: var(--r);
+            padding: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadowSoft);
+        }
+
+        .num {
+            width: 40px;
+            height: 40px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 1000;
+            color: var(--nav);
+            background: rgba(61, 78, 103, .10);
+            border: 1px solid rgba(61, 78, 103, .18);
+        }
+
+        .j .jt {
+            margin-top: 12px;
+            font-weight: 1000;
+            font-size: 16px;
+            letter-spacing: -.2px;
+        }
+
+        .j .jd {
+            margin-top: 10px;
+            color: #5d5d5d;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        /* ===== 갤러리 ===== */
+        .gallery {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 14px;
+        }
+
+        .gBig,
+        .gS {
+            border-radius: var(--r2);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadowSoft);
+            background: #ddd center/cover no-repeat;
+        }
+
+        .gBig {
+            min-height: 420px;
+            background-image: url("assets/img/farm/gallery-01.webp");
+        }
+
+        .gStack {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .gS.one {
+            background-image: url("assets/img/farm/gallery-02.webp");
+            min-height: 203px;
+        }
+
+        .gS.two {
+            background-image: url("assets/img/farm/gallery-03.webp");
+            min-height: 203px;
+        }
+
+        /* ===== 하단 전환 CTA ===== */
+        .finalBand {
+            margin-top: 20px;
+            border-radius: var(--r2);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, .06);
+            box-shadow: var(--shadowSoft);
+            background: linear-gradient(135deg, rgba(61, 78, 103, .96), rgba(15, 17, 20, .96));
+            color: #fff;
+        }
+
+        .finalBand .in {
+            padding: 22px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .finalBand .tt {
+            font-weight: 1000;
+            font-size: 18px;
+            letter-spacing: -.2px;
+        }
+
+        .finalBand .ss {
+            margin-top: 6px;
+            color: rgba(255, 255, 255, .74);
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .finalBand .r {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== Sticky quick reserve ===== */
+        .quickCTA {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            z-index: 70;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .qBtn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 14px;
+            border-radius: 999px;
+            font-weight: 1000;
+            letter-spacing: -.2px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .92);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, .14);
+            cursor: pointer;
+            transition: .2s ease;
+            white-space: nowrap;
+        }
+
+        .qBtn:hover {
+            transform: translateY(-1px);
+        }
+
+        .qBtn.primary {
+            background: var(--nav);
+            color: #fff;
+            border-color: rgba(61, 78, 103, .30);
+        }
+
+        .qBtn .sub {
+            font-size: 12px;
+            font-weight: 900;
+            opacity: .8;
+        }
+
+        /* Responsive */
+        @media (max-width: 980px) {
+            .heroTitle {
+                font-size: 38px;
+            }
+
+            .waterCard .in {
+                grid-template-columns: 1fr;
+            }
+
+            .split {
+                grid-template-columns: 1fr;
+            }
+
+            .certGrid {
+                grid-template-columns: 1fr;
+            }
+
+            .person {
+                grid-template-columns: 1fr;
+            }
+
+            .person .pImg {
+                min-height: 260px;
+            }
+
+            .journey {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gBig {
+                min-height: 280px;
+            }
+
+            .finalBand .in {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .farmHero {
+                padding: 92px 0 46px;
+                min-height: 82vh;
+            }
+
+            .heroTitle {
+                font-size: 32px;
+            }
+
+            .quickCTA {
+                right: 12px;
+                bottom: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ✅ NAV include 그대로 -->
+    <div id="site-nav"></div>
+
+    <main>
+        <!-- 1) Hero: 압도적 규모/전문성 -->
+        <section class="farmHero" aria-label="양식장 메인">
+            <!-- ✅ 영상이 있으면 사용, 없으면 video 태그 제거하고 poster div만 사용 -->
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/img/farm/hero-poster.webp">
+                <source src="assets/video/farm-hero.mp4" type="video/mp4">
+            </video>
+
+            <!-- 영상 없을 때 사용(선택): 아래 div 주석 해제하고 video는 주석 처리 -->
+            <!-- <div class="heroPoster" style="background-image:url('assets/img/farm/hero.webp');"></div> -->
+
+            <div class="ov" aria-hidden="true"></div>
+
+            <div class="wrap">
+                <div class="heroIn">
+                    <div class="kicker"><span class="dot"></span> THE ORIGIN OF PUMJANG</div>
+
+                    <h1 class="heroTitle">
+                        <span class="thin">맛의 시작은</span> 타협하지 않는 고집에서 시작됩니다
+                    </h1>
+
+                    <p class="heroDesc">
+                        전남 나주, <b>0000평 규모</b>의 삼원수산.<br>
+                        품장이 직접 키우고 직접 관리하는 장어의 고향입니다.
+                    </p>
+
+                    <div class="ctaRow">
+                        <a class="cta primary" href="index.html#reserve">실시간 예약하기</a>
+                        <a class="cta ghost" href="index.html#location">가까운 매장 찾기</a>
+                        <a class="cta white" href="#water">신뢰의 근거 보기</a>
+                    </div>
+
+                    <div class="heroMetrics" aria-label="핵심">
+                        <div class="metric"><b>Root</b><span>직영 양식장의 근본</span></div>
+                        <div class="metric"><b>Trust</b><span>검증 가능한 관리</span></div>
+                        <div class="metric"><b>Fresh</b><span>매장까지 이어지는 여정</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2) 환경: 물의 차이가 맛의 차이 -->
+        <section class="sec soft" id="water" aria-label="환경과 수질">
+            <div class="wrap head">
+                <div class="k">Environment</div>
+                <div class="t">‘물’의 차이가 ‘맛’의 차이</div>
+                <div class="d">
+                    장어는 물을 먹고 자랍니다. 수질의 안정성과 청결함이 잡내와 탄력을 결정합니다.
+                    품장은 “환경”부터 타협하지 않습니다.
+                </div>
+
+                <div class="waterCard">
+                    <div class="bg" aria-hidden="true"></div>
+                    <div class="in">
+                        <div>
+                            <h3>지하 200m 암반수 · 첨단 순환 여과 시스템</h3>
+                            <p>
+                                깨끗한 천연 암반수와 24시간 순환 여과 시스템으로 수질을 안정적으로 유지합니다.
+                                (관리 지표/검사 항목이 있다면 수치로 넣어주세요 — 기업 페이지처럼 신뢰가 확 올라갑니다)
+                            </p>
+                        </div>
+
+                        <div class="stats" aria-label="관리 지표(예시)">
+                            <div class="stat">
+                                <div class="st">24시간 모니터링</div>
+                                <div class="sd">수질 상태를 지속적으로 관리(예시 문구)</div>
+                            </div>
+                            <div class="stat">
+                                <div class="st">정기 수질 검사</div>
+                                <div class="sd">검사 주기/항목을 공개하면 신뢰가 상승</div>
+                            </div>
+                            <div class="stat">
+                                <div class="st">청결한 수조 시설</div>
+                                <div class="sd">사진/영상으로 ‘보여주는’ 것이 가장 강력</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3) 품종: 100% 국내산 자포니카 -->
+        <section class="sec" aria-label="품종">
+            <div class="wrap head">
+                <div class="k">Species</div>
+                <div class="t">100% 국내산 ‘자포니카’의 자부심</div>
+                <div class="d">
+                    저가형 외래종이 아닌, 최고급 종인 자포니카(Japonica)만 고집합니다.
+                    치어 선별부터 출하까지 모든 과정을 직접 모니터링합니다.
+                </div>
+
+                <div class="split">
+                    <article class="card">
+                        <div class="img" style="background-image:url('assets/img/farm/japonica.webp');"></div>
+                        <div class="body">
+                            <div class="tag">Japonica</div>
+                            <h3>부드러운 육질 · 탄력 있는 식감</h3>
+                            <p>윤기 흐르는 컨디션이 곧 품질입니다. ‘좋다’가 아니라 ‘기준으로 선별’합니다.</p>
+                            <ul class="bullets">
+                                <li><b>특징</b> : 부드러운 육질, 균형 잡힌 지방감</li>
+                                <li><b>관리</b> : 치어 선별 → 사육 → 출하 모니터링</li>
+                                <li><b>목표</b> : 매장 경험까지 동일한 컨디션</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="img" style="background-image:url('assets/img/farm/closeup.webp');"></div>
+                        <div class="body">
+                            <div class="tag">Quality</div>
+                            <h3>우리는 ‘출하 기준’을 공개합니다</h3>
+                            <p>가능하다면 크기/등급/선별 기준을 짧게라도 공개하세요. 기업 브랜딩이 완성됩니다.</p>
+                            <ul class="bullets">
+                                <li><b>Selection</b> : 최상의 크기/상태 선별</li>
+                                <li><b>Fresh</b> : 신선도 유지 원칙</li>
+                                <li><b>Standard</b> : 매장/택배 동일 기준</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4) 안전: 무항생제 & HACCP / 검사 성적서 -->
+        <section class="sec soft" aria-label="안전과 인증">
+            <div class="wrap head">
+                <div class="k">Safety</div>
+                <div class="t">무항생제 &amp; HACCP — 신뢰의 정점</div>
+                <div class="d">
+                    먹거리 안전은 가장 중요한 선택 기준입니다.
+                    인증과 검사 결과는 “설명”이 아니라 “증명”으로 보여주세요.
+                </div>
+
+                <div class="certGrid">
+                    <div class="certMain">
+                        <div class="tag">Certification</div>
+                        <h3 style="margin:12px 0 0; font-size:18px; font-weight:1000; letter-spacing:-.2px;">
+                            국가 인증/정기 검사로 검증 가능한 신뢰
+                        </h3>
+                        <p style="margin:10px 0 0; color:#5d5d5d; line-height:1.75; font-size:14px;">
+                            아래 항목은 보유/운영 사실에 맞춰 정확히 고정해 주세요.
+                            “인증명/번호/검사 주기” 같은 정보는 전환에 직접 영향을 줍니다.
+                        </p>
+
+                        <div class="certBadges" aria-label="인증 배지">
+                            <div class="badge">
+                                <div class="ic">A</div>
+                                <div>
+                                    <div class="bt">무항생제(해당 시)</div>
+                                    <div class="bs">약품 대신 정성으로 키웁니다</div>
+                                </div>
+                            </div>
+
+                            <div class="badge">
+                                <div class="ic">H</div>
+                                <div>
+                                    <div class="bt">HACCP(해당 시)</div>
+                                    <div class="bs">국가가 인정한 위생 기준</div>
+                                </div>
+                            </div>
+
+                            <div class="badge">
+                                <div class="ic">T</div>
+                                <div>
+                                    <div class="bt">정기 검사</div>
+                                    <div class="bs">중금속/잔류 항생제 등 결과 공개</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+                            <a class="cta primary" href="index.html#reserve">예약하기</a>
+                            <a class="cta"
+                                style="background:#fff; border:1px solid rgba(61,78,103,.18); color:var(--nav);"
+                                href="#journey">Farm to Table</a>
+                        </div>
+                    </div>
+
+                    <!-- 검사 성적서/인증서 슬라이드(이미지) -->
+                    <div class="certSlide" aria-label="성적서/인증서 슬라이더">
+                        <div class="ctrls">
+                            <button class="ctrl" type="button" id="certPrev" aria-label="이전">‹</button>
+                            <button class="ctrl" type="button" id="certNext" aria-label="다음">›</button>
+                        </div>
+
+                        <div class="sTrack" id="certTrack">
+                            <div class="s" style="background-image:url('assets/img/farm/cert-01.webp');"></div>
+                            <div class="s" style="background-image:url('assets/img/farm/cert-02.webp');"></div>
+                            <div class="s" style="background-image:url('assets/img/farm/cert-03.webp');"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5) 관리자 철학: 사람의 정성 -->
+        <section class="sec" aria-label="관리자의 철학">
+            <div class="wrap head">
+                <div class="k">People</div>
+                <div class="t">‘사람’의 정성 — 결국 맛은 사람이 만듭니다</div>
+                <div class="d">
+                    관리자의 얼굴과 손이 보이면 신뢰는 급상승합니다.
+                    인터뷰는 길게 쓰지 말고 “원칙 한 문장”이 가장 강합니다.
+                </div>
+
+                <div class="person">
+                    <div class="pImg" style="background-image:url('assets/img/farm/manager.webp');"></div>
+                    <div class="pBody">
+                        <div class="tag">Philosophy</div>
+                        <h3 style="margin:12px 0 0; font-size:20px; font-weight:1000; letter-spacing:-.2px;">
+                            타협하지 않는 관리가 품장의 근본입니다
+                        </h3>
+
+                        <blockquote>
+                            “내 가족이 먹지 못하는 장어는 키우지도, 팔지도 않습니다.”
+                        </blockquote>
+
+                        <div class="qna">
+                            수질 관리, 선별 기준, 출하 컨디션까지 — 보이지 않는 기준을 지키는 것이
+                            결국 한 끼의 차이를 만듭니다.
+                        </div>
+
+                        <div class="ctaRow" style="margin-top:16px;">
+                            <a class="cta primary" href="index.html#location">매장 찾기</a>
+                            <a class="cta"
+                                style="background:#fff; border:1px solid rgba(61,78,103,.18); color:var(--nav);"
+                                href="index.html#reserve">예약하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6) Farm to Table: 양식장에서 매장까지 -->
+        <section class="sec soft" id="journey" aria-label="Farm to Table 여정">
+            <div class="wrap head">
+                <div class="k">Farm to Table</div>
+                <div class="t">양식장에서 매장까지의 여정</div>
+                <div class="d">
+                    “갓 잡아 올린 장어가 어떻게 매장으로 전달되는가?”
+                    이 섹션이 ‘기업’ 느낌을 완성합니다.
+                </div>
+
+                <div class="journey">
+                    <div class="j">
+                        <div class="num">01</div>
+                        <div class="jt">Selection</div>
+                        <div class="jd">최상의 크기와 상태를 가진 장어를 선별합니다.</div>
+                    </div>
+
+                    <div class="j">
+                        <div class="num">02</div>
+                        <div class="jt">Transport</div>
+                        <div class="jd">신선도 유지를 위한 특수 활어차로 운반합니다.</div>
+                    </div>
+
+                    <div class="j">
+                        <div class="num">03</div>
+                        <div class="jt">Preparation</div>
+                        <div class="jd">매장 내 청결한 손질실에서 당일 손질합니다.</div>
+                    </div>
+
+                    <div class="j">
+                        <div class="num">04</div>
+                        <div class="jt">Table</div>
+                        <div class="jd">고객의 식탁에 오르는 가장 신선한 상태로 제공합니다.</div>
+                    </div>
+                </div>
+
+                <div class="finalBand">
+                    <div class="in">
+                        <div>
+                            <div class="tt">이 건강한 장어, 지금 매장에서 만나보세요</div>
+                            <div class="ss">전환을 위해 페이지 마지막은 “지점 예약”으로 강하게 연결합니다.</div>
+                        </div>
+                        <div class="r" id="reserve">
+                            <!-- ✅ 링크 교체(네이버예약/카카오채널 등) -->
+                            <a class="cta white" href="#">나주점 예약하기</a>
+                            <a class="cta ghost" href="#">을왕리점 예약하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 현장 갤러리 -->
+        <section class="sec" aria-label="현장 갤러리">
+            <div class="wrap head">
+                <div class="k">Gallery</div>
+                <div class="t">현장 갤러리 — 신뢰는 ‘보여주는 것’</div>
+                <div class="d">
+                    드론 전경 → 수조 → 작업 → 포장(사람이 보이는 컷) 순서로 구성하면 설득력이 최고입니다.
+                </div>
+
+                <div class="gallery">
+                    <div class="gBig" aria-hidden="true"></div>
+                    <div class="gStack" aria-hidden="true">
+                        <div class="gS one"></div>
+                        <div class="gS two"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sticky Quick CTA -->
+        <div class="quickCTA" aria-label="퀵 메뉴">
+            <a class="qBtn primary" href="index.html#reserve">실시간 예약 <span class="sub">바로가기</span></a>
+            <a class="qBtn" href="tel:000-0000-0000">전화 문의 <span class="sub">즉시 연결</span></a>
+        </div>
+    </main>
+
+    <!-- ✅ FOOTER include 그대로 -->
+    <div id="site-footer"></div>
+
+    <script>
+        // NAV/FOOTER include
+        async function loadPartial(id, url) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const res = await fetch(url, { cache: "no-store" });
+            el.innerHTML = await res.text();
+        }
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            await loadPartial("site-nav", "nav-landing.html");
+            await loadPartial("site-footer", "footer.html");
+
+            // Certification slider
+            const track = document.getElementById("certTrack");
+            const prev = document.getElementById("certPrev");
+            const next = document.getElementById("certNext");
+            if (track && prev && next) {
+                const total = track.children.length;
+                let idx = 0;
+                const go = (n) => {
+                    idx = (n + total) % total;
+                    track.style.transform = `translateX(-${idx * 100}%)`;
+                };
+                prev.addEventListener("click", () => go(idx - 1));
+                next.addEventListener("click", () => go(idx + 1));
+            }
+        });
+    </script>
+</body>
+
+</html>
